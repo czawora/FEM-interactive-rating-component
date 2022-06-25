@@ -9,15 +9,18 @@
   <title>Frontend Mentor | Interactive rating component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Overpass">
+
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
 
     * {
-      outline: 1px solid greenyellow;
-    }
+     /* outline: 1px solid greenyellow;
+    */}
 
     body {
+      font-family: "Overpass", sans-serif;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -32,28 +35,73 @@
       max-width: 25%;
     }
 
+    .circle-container {
+      border-radius: 50%;
+      background-color: hsl(216, 12%, 54%);
+      border: none;
+      height: 50px;
+      width: 50px;
+    }
+
+    .icon-container{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
     .title {
       color: hsl(0, 0%, 100%);
     }
 
     .content {
-      margin-bottom: 22px;
+      margin-bottom: 27px;
+      color: hsl(217, 12%, 63%);
+      font-size: 15px;
     }
 
     .button-row{
       display: flex;
       justify-content: space-between;
-      margin-bottom: 22px;
+      margin-bottom: 27px;
     }
 
-    .button-container{
+    .num-button {
+      color: hsl(217, 12%, 63%);
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .num-button:focus {
+      background-color: grey;
+      color: white;
+    }
+
+    .num-button:hover {
+      background-color: hsl(25, 97%, 53%);
+      color: white;
+    }
+
+    .submit-button-container{
       display: flex;
       justify-content: center;
       align-items: center;
     }
 
     .submit-button {
+      border-radius: 25px;
+      background-color: hsl(25, 97%, 53%);
+      color: white;
+      width: 100%;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border: none;
+      cursor: pointer;
+    }
 
+    .submit-button:hover{
+      background-color: white;
+      color: hsl(25, 97%, 53%);
     }
 
   </style>
@@ -61,7 +109,7 @@
 <body>
 
   <div class="card">
-    <div class="icon-container">
+    <div class="circle-container icon-container">
       <img src="./images/icon-star.svg"/>
     </div>
     <h2 class="title">How did we do?</h2>
@@ -71,14 +119,14 @@
       to help us improve our offering!
     </p>
     <div class="button-row">
-      <button>1</button>
-      <button>2</button>
-      <button>3</button>
-      <button>4</button>
-      <button>5</button>
+      <button class="circle-container num-button">1</button>
+      <button class="circle-container num-button">2</button>
+      <button class="circle-container num-button">3</button>
+      <button class="circle-container num-button">4</button>
+      <button class="circle-container num-button">5</button>
     </div>
-    <div class="button-container">
-      <button class="submit-button">Submit</button>
+    <div class="submit-button-container">
+      <button class="submit-button">S U B M I T</button>
     </div>
   </div>
   
